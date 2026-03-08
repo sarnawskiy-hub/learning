@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AELORA — Personal Brand. Creative visionary crafting meaningful digital experiences. Портфоліо та контакти." />
+  <title>AELORA — Personal Brand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-dark">
+  <!-- === CANVAS BACKGROUND EXPERIMENT === -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- === GRADIENT ORBS === -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+
+  <!-- === NAVIGATION === -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="brand-gradient">AELORA</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-en="About" data-uk="Про мене">Про мене</a></li>
+        <li><a href="#skills" data-en="Skills" data-uk="Навички">Навички</a></li>
+        <li><a href="#works" data-en="Works" data-uk="Роботи">Роботи</a></li>
+        <li><a href="#contact" data-en="Contact" data-uk="Контакт">Контакт</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-btn" id="lang-toggle" aria-label="Switch language">
+          <span class="lang-label" id="lang-label">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- === HERO === -->
+  <header id="hero">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="dot"></span>
+        <span data-en="Available for work" data-uk="Відкритий до співпраці">Відкритий до співпраці</span>
+      </div>
+      <h1 class="hero-name reveal delay-1">Alex<br /><span class="brand-gradient">Aelora</span></h1>
+      <p class="hero-tagline reveal delay-2">
+        <span data-en="Creative Visionary &amp; Digital Craftsman"
+          data-uk="Творчий візіонер та цифровий майстер">Творчий візіонер та цифровий майстер</span>
+      </p>
+      <p class="hero-sub reveal delay-3">
+        <span data-en="I design and build digital experiences that inspire, resonate, and endure."
+          data-uk="Я створюю цифровий досвід, який надихає, резонує та залишається в пам'яті.">Я створюю цифровий
+          досвід, який надихає, резонує та залишається в пам'яті.</span>
+      </p>
+      <div class="hero-cta reveal delay-4">
+        <a href="#works" class="btn btn-primary">
+          <span data-en="View Works" data-uk="Переглянути роботи">Переглянути роботи</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <span data-en="Let's Talk" data-uk="Зв'язатись">Зв'язатись</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual reveal delay-2">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <img src="img/avatar.png" alt="Alex Aelora" class="avatar-img" id="avatar-img" />
+        <div class="avatar-glow"></div>
+      </div>
+      <div class="floating-chip chip-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
+        </svg>
+        <span>UI/UX</span>
+      </div>
+      <div class="floating-chip chip-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+        </svg>
+        <span>DEV</span>
+      </div>
+      <div class="floating-chip chip-3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <span>BRAND</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span data-en="Scroll" data-uk="Гортай">Гортай</span>
+    </div>
+  </header>
+
+  <!-- === STATS BAR === -->
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <span class="stat-num" data-target="5">0</span><span>+</span>
+      <span class="stat-label" data-en="Years exp." data-uk="Років досвіду">Років досвіду</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal delay-1">
+      <span class="stat-num brand-gradient" data-target="2">0</span><span class="brand-gradient">M+</span>
+      <span class="stat-label" data-en="Active Users Daily" data-uk="Активних користувачів щодня">Активних користувачів
+        щодня</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal delay-2">
+      <span class="stat-num brand-gradient" data-target="98">0</span><span class="brand-gradient">%</span>
+      <span class="stat-label" data-en="Client Satisfaction" data-uk="Задоволеність клієнтів">Задоволеність
+        клієнтів</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal delay-3">
+      <span class="stat-num brand-gradient" data-target="15">0</span><span class="brand-gradient">+</span>
+      <span class="stat-label" data-en="Industry Awards" data-uk="Галузевих нагород">Галузевих нагород</span>
+    </div>
+  </div>
+
+  <!-- === ABOUT === -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-tag reveal" data-en="// About me" data-uk="// Про мене">// Про мене</div>
+      <h2 class="section-title reveal delay-1">
+        <span data-en="Crafting Digital" data-uk="Створюю цифровий">Створюю цифровий</span><br />
+        <span class="brand-gradient" data-en="Magic Every Day" data-uk="Магічний досвід">Магічний досвід</span>
+      </h2>
+      <div class="about-grid">
+        <div class="about-text reveal delay-2">
+          <p data-en="Hello! I'm Alex — a creative designer and developer based in Kyiv, Ukraine. I combine aesthetics with engineering to craft interfaces that don't just look stunning — they feel alive."
+            data-uk="Привіт! Я Алекс — креативний дизайнер та розробник із Києва, Україна. Я поєдную естетику та інженерію, щоб створювати інтерфейси, які не просто виглядають приголомшливо — вони живі.">
+            Привіт! Я Алекс — креативний дизайнер та розробник із Києва, Україна. Я поєдную естетику та інженерію, щоб
+            створювати інтерфейси, які не просто виглядають приголомшливо — вони живі.</p>
+          <p data-en="My work sits at the intersection of art, psychology, and technology. Every pixel is intentional. Every interaction tells a story."
+            data-uk="Моя робота знаходиться на перетині мистецтва, психології та технологій. Кожен піксель є свідомим. Кожна взаємодія розповідає історію.">
+            Моя робота знаходиться на перетині мистецтва, психології та технологій. Кожен піксель є свідомим. Кожна
+            взаємодія розповідає історію.</p>
+          <div class="about-badges">
+            <span class="badge">Figma</span>
+            <span class="badge">React</span>
+            <span class="badge">Motion Design</span>
+            <span class="badge">Branding</span>
+            <span class="badge">Node.js</span>
+            <span class="badge">AI Tools</span>
+          </div>
+        </div>
+        <div class="about-cards reveal delay-3">
+          <div class="about-card glass reveal delay-2">
+            <div class="about-card-icon"><img src="img/icon_design_solid.png" alt="Design"
+                style="width:48px;height:48px;object-fit:contain;"></div>
+            <h3 data-en="UI/UX Design" data-uk="UI/UX Дизайн">UI/UX Дизайн</h3>
+            <p data-en="Crafting intuitive, user-centric interfaces that not only look stunning but drive conversions and loyalty."
+              data-uk="Створення інтуїтивних інтерфейсів, орієнтованих на користувача, які не тільки виглядають приголомшливо, але й сприяють конверсіям та лояльності.">
+              Створення інтуїтивних інтерфейсів, орієнтованих на користувача, які не тільки виглядають приголомшливо,
+              але й сприяють конверсіям та лояльності.</p>
+          </div>
+          <div class="about-card glass reveal delay-3">
+            <div class="about-card-icon"><img src="img/icon_dev_solid.png" alt="Development"
+                style="width:48px;height:48px;object-fit:contain;"></div>
+            <h3 data-en="Web Development" data-uk="Веб-розробка">Веб-розробка</h3>
+            <p data-en="Building scalable, high-performance web applications using modern stacks like React, Next.js, and Node."
+              data-uk="Створення масштабованих веб-додатків з високою продуктивністю за допомогою сучасних стеків, таких як React, Next.js та Node.">
+              Створення масштабованих веб-додатків з високою продуктивністю за допомогою сучасних стеків, таких як
+              React, Next.js та Node.</p>
+          </div>
+          <div class="about-card glass reveal delay-4">
+            <div class="about-card-icon"><img src="img/icon_strategy_solid.png" alt="Strategy"
+                style="width:48px;height:48px;object-fit:contain;"></div>
+            <h3 data-en="Brand Strategy" data-uk="Бренд-стратегія">Бренд-стратегія</h3>
+            <p data-en="Developing cohesive brand systems and motion guidelines that tell your story across all digital touchpoints."
+              data-uk="Розробка цілісних бренд-систем та гайдлайнів з анімації, які розповідають вашу історію на всіх цифрових платформах.">
+              Розробка цілісних бренд-систем та гайдлайнів з анімації, які розповідають вашу історію на всіх цифрових
+              платформах.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SKILLS === -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-tag reveal" data-en="// Skills" data-uk="// Навички">// Навички</div>
+      <h2 class="section-title reveal delay-1">
+        <span data-en="My " data-uk="Мій ">Мій </span><span class="brand-gradient" data-en="Toolkit"
+          data-uk="Арсенал">Арсенал</span>
+      </h2>
+      <div class="skills-grid reveal delay-2">
+        <div class="skill-card glass">
+          <div class="skill-header">
+            <span class="skill-icon">✦</span>
+            <span class="skill-name">UI Design</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="95"></div>
+          </div>
+          <span class="skill-pct">95%</span>
+        </div>
+        <div class="skill-card glass">
+          <div class="skill-header">
+            <span class="skill-icon">✦</span>
+            <span class="skill-name">Branding</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="90"></div>
+          </div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-card glass">
+          <div class="skill-header">
+            <span class="skill-icon">✦</span>
+            <span class="skill-name">React / Next.js</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="88"></div>
+          </div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-card glass">
+          <div class="skill-header">
+            <span class="skill-icon">✦</span>
+            <span class="skill-name">Motion Design</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="82"></div>
+          </div>
+          <span class="skill-pct">82%</span>
+        </div>
+        <div class="skill-card glass">
+          <div class="skill-header">
+            <span class="skill-icon">✦</span>
+            <span class="skill-name">Node.js / API</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="78"></div>
+          </div>
+          <span class="skill-pct">78%</span>
+        </div>
+        <div class="skill-card glass">
+          <div class="skill-header">
+            <span class="skill-icon">✦</span>
+            <span class="skill-name">AI / Prompt Eng.</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-width="85"></div>
+          </div>
+          <span class="skill-pct">85%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === WORKS === -->
+  <section id="works">
+    <div class="section-inner">
+      <div class="section-tag reveal" data-en="// Portfolio" data-uk="// Портфоліо">// Портфоліо</div>
+      <h2 class="section-title reveal delay-1">
+        <span data-en="Selected " data-uk="">
+        </span><span class="brand-gradient" data-en="Works" data-uk="Вибрані роботи">Вибрані роботи</span>
+      </h2>
+      <div class="works-grid">
+        <div class="work-card glass reveal delay-1">
+          <div class="work-img">
+            <img src="img/work_1.png" alt="Luminos Finance App" />
+            <div class="work-overlay">
+              <a href="#" class="work-link" data-en="View Project" data-uk="Переглянути">Переглянути</a>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">UI/UX Design</span>
+            <h3 data-en="Luminos Finance App" data-uk="Фінансовий додаток Luminos">Фінансовий додаток Luminos</h3>
+            <p data-en="Complete UI redesign boosting engagement by 340%"
+              data-uk="Повний редизайн UI, що підвищив залученість на 340%">Повний редизайн UI, що підвищив залученість
+              на 340%</p>
+          </div>
+        </div>
+        <div class="work-card glass reveal delay-2">
+          <div class="work-img">
+            <img src="img/work_2.png" alt="Veltara Brand Identity" />
+            <div class="work-overlay">
+              <a href="#" class="work-link" data-en="View Project" data-uk="Переглянути">Переглянути</a>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Branding</span>
+            <h3 data-en="Veltara Brand Identity" data-uk="Ідентичність бренду Veltara">Ідентичність бренду Veltara</h3>
+            <p data-en="Full brand system from logo to motion guidelines"
+              data-uk="Повна система бренду від логотипу до motion-гайдлайнів">Повна система бренду від логотипу до
+              motion-гайдлайнів</p>
+          </div>
+        </div>
+        <div class="work-card glass reveal delay-3">
+          <div class="work-img">
+            <img src="img/work_3.png" alt="Nexara E-Commerce Platform" />
+            <div class="work-overlay">
+              <a href="#" class="work-link" data-en="View Project" data-uk="Переглянути">Переглянути</a>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Web Development</span>
+            <h3 data-en="Nexara E-Commerce Platform" data-uk="Платформа електронної комерції Nexara">Платформа
+              e-commerce Nexara</h3>
+            <p data-en="Scalable Next.js storefront with 98 Lighthouse score"
+              data-uk="Масштабований Next.js магазин з оцінкою Lighthouse 98">Масштабований Next.js магазин з оцінкою
+              Lighthouse 98</p>
+          </div>
+        </div>
+        <div class="work-card glass reveal delay-1">
+          <div class="work-img">
+            <img src="img/work_4.png" alt="Solara Motion Pack" />
+            <div class="work-overlay">
+              <a href="#" class="work-link" data-en="View Project" data-uk="Переглянути">Переглянути</a>
+            </div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Motion Design</span>
+            <h3 data-en="Solara Motion Pack" data-uk="Solara Motion Pack">Solara Motion Pack</h3>
+            <p data-en="Award-winning animation system for mobile apps"
+              data-uk="Нагороджена система анімацій для мобільних додатків">Нагороджена система анімацій для мобільних
+              додатків</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === TESTIMONIALS === -->
+  <section id="testimonials">
+    <div class="section-inner">
+      <div class="section-tag reveal" data-en="// Testimonials" data-uk="// Відгуки">// Відгуки</div>
+      <h2 class="section-title reveal delay-1">
+        <span data-en="What clients " data-uk="Що кажуть ">Що кажуть </span>
+        <span class="brand-gradient" data-en="say" data-uk="клієнти">клієнти</span>
+      </h2>
+      <div class="testimonials-track reveal delay-2">
+        <div class="testimonial glass">
+          <div class="testi-stars">★★★★★</div>
+          <p data-en='"Alex transformed our product beyond recognition. The design thinking combined with technical mastery is absolutely rare."'
+            data-uk='"Алекс перетворив наш продукт до невпізнанності. Дизайн-мислення в поєднанні з технічною майстерністю — це надзвичайно рідкісно."'>
+            "Алекс перетворив наш продукт до невпізнанності. Дизайн-мислення в поєднанні з технічною майстерністю — це
+            надзвичайно рідкісно."</p>
+          <div class="testi-author">
+            <img src="img/client_1.png" alt="Maria Chen" class="testi-avatar" />
+            <div>
+              <strong>Maria Chen</strong>
+              <span>CEO, Luminos.io</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial glass">
+          <div class="testi-stars">★★★★★</div>
+          <p data-en='"Working with Aelora was a game-changer. Our conversion rate tripled after the redesign. Truly a visionary."'
+            data-uk='"Робота з Aelora стала переломною. Наш коефіцієнт конверсії потроївся після редизайну. Справжній візіонер."'>
+            "Робота з Aelora стала переломною. Наш коефіцієнт конверсії потроївся після редизайну. Справжній візіонер."
+          </p>
+          <div class="testi-author">
+            <img src="img/client_2.png" alt="James Müller" class="testi-avatar" />
+            <div>
+              <strong>James Müller</strong>
+              <span>CTO, Veltara GmbH</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial glass">
+          <div class="testi-stars">★★★★★</div>
+          <p data-en='"Professional, creative, and always on time. The brand identity Alex created became our biggest asset."'
+            data-uk='"Професійно, творчо та завжди вчасно. Ідентичність бренду, яку створив Алекс, стала нашим головним активом."'>
+            "Професійно, творчо та завжди вчасно. Ідентичність бренду, яку створив Алекс, стала нашим головним активом."
+          </p>
+          <div class="testi-author">
+            <img src="img/client_3.png" alt="Олена Ковальчук" class="testi-avatar" />
+            <div>
+              <strong>Олена Ковальчук</strong>
+              <span>Founder, Nexara UA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === CONTACT === -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-tag reveal" data-en="// Contact" data-uk="// Контакт">// Контакт</div>
+      <h2 class="section-title reveal delay-1">
+        <span data-en="Let's build " data-uk="Давайте створимо ">Давайте створимо </span>
+        <span class="brand-gradient" data-en="something great" data-uk="щось неймовірне">щось неймовірне</span>
+      </h2>
+      <div class="contact-grid reveal delay-2">
+        <div class="contact-info">
+          <p class="contact-lead"
+            data-en="Have a project in mind? I'd love to hear about it. Let's create something extraordinary together."
+            data-uk="Є ідея для проєкту? Я хотів би почути про неї. Давайте разом створимо щось надзвичайне.">Є ідея для
+            проєкту? Я хотів би почути про неї. Давайте разом створимо щось надзвичайне.</p>
+          <div class="contact-links">
+            <a href="mailto:hello@aelora.design" class="contact-link glass">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              hello@aelora.design
+            </a>
+            <a href="https://t.me/aelora" class="contact-link glass">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+              Telegram
+            </a>
+            <a href="https://linkedin.com/in/aelora" class="contact-link glass">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <form class="contact-form glass reveal delay-3" id="contact-form">
+          <div class="form-group">
+            <label for="cf-name" data-en="Your Name" data-uk="Ваше ім'я">Ваше ім'я</label>
+            <input type="text" id="cf-name" placeholder="Alex Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-email" data-en="Email" data-uk="Електронна пошта">Електронна пошта</label>
+            <input type="email" id="cf-email" placeholder="hello@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-message" data-en="Message" data-uk="Повідомлення">Повідомлення</label>
+            <textarea id="cf-message" rows="4" placeholder="..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">
+            <span data-en="Send Message" data-uk="Надіслати">Надіслати</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">AELORA</span>
+      <p class="footer-copy" data-en="© 2026 Alex Aelora. Crafted with passion."
+        data-uk="© 2026 Alex Aelora. Створено з пристрастю.">© 2026 Alex Aelora. Створено з пристрастю.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="GitHub">GH</a>
+        <a href="#" aria-label="Dribbble">DR</a>
+        <a href="#" aria-label="Behance">BE</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
